@@ -1,0 +1,48 @@
+<?page title="Upload Image ZK" contentType="text/html;charset=UTF-8"?>
+<window title="Subir Imagen con ZK Framework MVVM" border="none" hflex="min" apply="org.zkoss.bind.BindComposer"
+	viewModel="@id('vm') @init('com.org.UploadMVVM.UploadImageMVVM')">
+	
+
+
+
+    <grid>
+        <rows>
+            <row>
+                Usuario:
+                <textbox id="titleTextbox"
+                    />
+            </row>
+            <row>
+                Nombre
+                  <textbox id="titleNombre"
+                    />
+            </row>
+            <row>
+                Presentacion Preliminar Imagen:
+               <button id="btnUpload" mold="trendy" upload="true" label="Importar"
+               onUpload="@command('upload')" />
+               <image content="@bind(vm.myImage)" height="150px" width="300px" />
+            </row>
+            <row>
+                 Validar:
+                <checkbox label="Activo"/>
+                 <checkbox label="Inactivo"/>
+                 
+            </row>
+            
+            <row>
+                 <button id="submitButton" label="Enviar" />
+            </row>
+        </rows>
+    </grid>
+
+
+
+
+
+
+
+
+  
+
+</window>
